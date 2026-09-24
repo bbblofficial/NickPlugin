@@ -1,0 +1,73 @@
+# ==========================================================
+#  NickPlugin Configuration
+#  Author: Muvixo
+#  Theme : Aqua & White
+#  Spigot 1.8.8
+# ==========================================================
+
+colors:
+  primary: '&b'
+  secondary: '&f'
+  accent: '&3'
+  muted: '&7'
+  error: '&c'
+  success: '&a'
+  bold: '&l'
+
+nick:
+  min-length: 3
+  max-length: 16
+  allowed-regex: '^[A-Za-z0-9_]+$'
+  show-in-chat: true
+  show-in-tab: true
+  show-in-nametag: true
+  show-in-scoreboard: true
+  show-in-join-quit: true
+  hide-rank-while-nicked: true
+
+ranks:
+  default:
+    prefix: '&7'
+    display: 'Default'
+  vip:
+    prefix: '&a[VIP] &a'
+    display: 'VIP'
+  vip+:
+    prefix: '&a[VIP&6+&a] &a'
+    display: 'VIP+'
+  mvp:
+    prefix: '&b[MVP] &b'
+    display: 'MVP'
+  mvp+:
+    prefix: '&b[MVP&c+&b] &b'
+    display: 'MVP+'
+  mvp++:
+    prefix: '&6[MVP&c++&6] &6'
+    display: 'MVP++'
+
+default-nick-rank: 'default'
+
+messages:
+  prefix: '&8[&bNick&8] &f'
+  no-permission: '&cYou do not have permission to do that.'
+  usage: '&b/nick &f<name|random|reset|rank|skin|list>'
+  nick-set: 'Your nickname is now %nick%.'
+  nick-reset: 'Your nickname has been reset.'
+  nick-taken: 'That nickname is already in use.'
+  nick-invalid: 'Invalid nickname. Allowed: letters, digits, underscore (3-16 chars).'
+  nick-random: 'Your random nickname is %nick%.'
+  nick-rank-set: 'Your display rank is now %rank%.'
+  nick-list-header: '&8&m---------------- &bNicknames &8&m----------------'
+  nick-list-entry: '&b%player% &8-> &f%nick%'
+  nick-list-empty: '&7No nicknamed players online.'
+  nick-other-set: 'Set %player%''s nickname to %nick%.'
+  nick-other-reset: 'Reset %player%''s nickname.'
+  reload-done: 'Configuration reloaded.'
+  reload-failed: 'Reload failed: %error%'
+  skin-not-supported: 'Skin changing is not supported on this server yet.'
+  player-not-found: 'Player not found: %player%.'
+  names-empty: 'names.txt is empty or missing - using fallback names.'
+
+storage:
+  file: 'nicks.yml'
+  autosave-seconds: 300
