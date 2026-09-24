@@ -1,0 +1,43 @@
+name: NickPlugin
+version: 1.0.2
+main: com.muvixo.nick.NickPlugin
+author: Muvixo
+authors: [Muvixo]
+description: Hypixel-style Nick plugin for Spigot 1.8.8 - by Muvixo
+api-version: 1.8
+
+commands:
+  nick:
+    description: Manage your nickname
+    usage: /nick <name|random|reset|rank|list|reload>
+    aliases: [nickname, n]
+
+permissions:
+  nick.*:
+    description: Grants all Nick permissions
+    default: op
+    children:
+      nick.use: true
+      nick.random: true
+      nick.reset: true
+      nick.rank: true
+      nick.others: true
+      nick.admin: true
+  nick.use:
+    description: Allows using /nick
+    default: true
+  nick.random:
+    description: Allows /nick random and the OK button
+    default: true
+  nick.reset:
+    description: Allows /nick reset
+    default: true
+  nick.rank:
+    description: Allows /nick rank
+    default: op
+  nick.others:
+    description: Allows managing other players
+    default: op
+  nick.admin:
+    description: Allows /nick reload
+    default: op

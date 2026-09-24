@@ -1,0 +1,46 @@
+# NickPlugin - Menu Customization
+# Use & for color codes. \n creates a new line in book pages.
+
+title: "&b&lNick Setup"
+author: "Muvixo"
+
+page-1: |
+  &b&l  Nickname Setup
+  
+  &7  Nick selection is currently
+  &7  under development.
+  
+  &7  A random nickname will be
+  &7  chosen for you.
+  
+  &e  Do you want to continue?
+  
+  &7  Click a button below
+  &7  to confirm or cancel.
+
+page-2: |
+  &b&l  Manual Commands
+  
+  &7  /nick <name>
+  &7    set a custom nick
+  
+  &7  /nick random
+  &7    random nick
+  
+  &7  /nick reset
+  &7    remove your nick
+  
+  &7  /nick rank <rank>
+  &7    change display rank
+
+buttons:
+  ok:
+    text: "[ OK ✔ ]"
+    color: "&a"
+    bold: true
+    hover: "Confirm and choose random nick"
+  cancel:
+    text: "[ Cancel ✘ ]"
+    color: "&c"
+    bold: true
+    hover: "Cancel"

@@ -1,0 +1,62 @@
+# NickPlugin configuration
+#
+# NOTE ABOUT "ranks":
+# A rank here is NOT a permission rank. It is just a cosmetic tag/prefix
+# that gets chained directly in front of your nickname, e.g.:
+#   rank "vip" + nickname "Steve"  ->  "[VIP] Steve"
+# This combined text is what shows in the tab list, above your head
+# (nametag) and in chat. Changing "prefix" below changes what gets
+# glued in front of the nickname everywhere.
+
+debug: false
+
+colors:
+  primary: '&b'
+  secondary: '&f'
+  accent: '&3'
+  muted: '&7'
+  error: '&c'
+  success: '&a'
+  bold: '&l'
+ 
+nick:
+  min-length: 3
+  max-length: 16
+  allowed-regex: '^[A-Za-z0-9_]+$'
+  show-in-chat: true
+  show-in-tab: true
+  show-in-nametag: true
+
+ranks:
+  default:
+    prefix: '&7'
+    display: 'Default'
+  vip:
+    prefix: '&a[VIP] &a'
+    display: 'VIP'
+  vip+:
+    prefix: '&a[VIP&6+&a] &a'
+    display: 'VIP+'
+  mvp:
+    prefix: '&b[MVP] &b'
+    display: 'MVP'
+  mvp+:
+    prefix: '&b[MVP&c+&b] &b'
+    display: 'MVP+'
+  mvp++:
+    prefix: '&6[MVP&c++&6] &6'
+    display: 'MVP++'
+
+default-nick-rank: 'default'
+
+messages:
+  prefix: '&8[&bNick&8] &f'
+  no-permission: '&cYou do not have permission to do that.'
+  nick-taken: '&cThat nickname is already in use.'
+  nick-invalid: '&cInvalid nickname. Allowed: letters, digits, underscore (3-16 chars).'
+  reload-done: '&aConfiguration reloaded.'
+  menu-unavailable: '&cThe nick menu is unavailable on this server version. Use &f/nick random &cor &f/nick <name>&c instead.'
+
+storage:
+  file: 'nicks.yml'
+  autosave-seconds: 300
